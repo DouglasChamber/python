@@ -1,0 +1,70 @@
+num = ( int(input('Digite o 1º valor: ')),
+        int(input('Digite o 2º valor: ')),
+        int(input('Digite o 3º valor: ')),
+        int(input('Digite o 4º valor: ')) )
+
+print(f'Você digitou os valores: {num}')
+print(f'O valor 9 apareceu {num.count(9)} vezes')
+
+if 3 in num:
+    print(f'O valor 3 apareceu na {num.index(3)+1}ª posição')
+
+print('Os valores pares digitados foram: ', end='')
+for n in num:
+    if n % 2 == 0:
+        print(n, end=' ')
+
+
+'''
+import time
+from colorama import Fore, Style, init
+
+# Inicializa o Colorama
+init(autoreset=True)
+
+print(Fore.YELLOW + Style.BRIGHT + '-=' * 20)
+print(Fore.GREEN + Style.BRIGHT + '📊 ANÁLISE DE VALORES 📊')
+print(Fore.YELLOW + Style.BRIGHT + '-=' * 20)
+
+# Lê quatro valores e guarda em uma tupla
+valores = (
+    int(input(Fore.CYAN + 'Digite o 1º valor: ')),
+    int(input(Fore.CYAN + 'Digite o 2º valor: ')),
+    int(input(Fore.CYAN + 'Digite o 3º valor: ')),
+    int(input(Fore.CYAN + 'Digite o 4º valor: '))
+)
+
+time.sleep(1)
+print(Fore.YELLOW + '-=' * 20)
+
+# A) Quantas vezes apareceu o valor 9
+print(Fore.MAGENTA + '🔎 Analisando o número 9...')
+time.sleep(1)
+print(Fore.WHITE + f'O número 9 apareceu {valores.count(9)} vez(es).')
+
+time.sleep(2)
+print(Fore.YELLOW + '-=' * 20)
+
+# B) Em que posição foi digitado o primeiro valor 3
+print(Fore.MAGENTA + '🔎 Procurando o número 3...')
+time.sleep(1)
+if 3 in valores:
+    print(Fore.WHITE + f'O primeiro valor 3 foi digitado na posição {valores.index(3)+1}.')
+else:
+    print(Fore.RED + 'O valor 3 não foi digitado.')
+
+time.sleep(2)
+print(Fore.YELLOW + '-=' * 20)
+
+# C) Quais foram os números pares
+print(Fore.MAGENTA + '🔎 Identificando números pares...')
+time.sleep(1)
+pares = [n for n in valores if n % 2 == 0]
+if pares:
+    print(Fore.WHITE + f'Os valores pares digitados foram: {pares}')
+else:
+    print(Fore.RED + 'Nenhum valor par foi digitado.')
+
+print(Fore.YELLOW + '-=' * 20)
+print(Fore.GREEN + Style.BRIGHT + '✅ Análise concluída!')
+'''
