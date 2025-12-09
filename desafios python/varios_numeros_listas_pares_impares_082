@@ -1,0 +1,44 @@
+num = list()
+pares = list()
+ímpares = list()
+while True:
+    num.append(int(input('Digite um número: ')))
+    resp = str(input('Quer continuar? [S/N] ')).strip().upper()
+    if resp in 'N':
+        break
+for i, v, in enumerate(num):
+    if v % 2 == 0:
+        pares.append(v)
+    elif v % 2 == 1:
+        ímpares.append(v)
+print('=-=' * 20)
+print(f'Você digitou os valores em ordem crescente: {sorted(num)}')
+print(f'Valores pares: {pares}')
+print(f'Valores ímpares: {ímpares}')
+
+'''
+num = []
+
+while True:
+    valor = int(input('\033[36m🔢 Digite um valor: \033[m'))
+    if valor not in num:
+        num.append(valor)
+        print('\033[32m✅ Valor adicionado com sucesso!\033[m')
+    else:
+        print('\033[33m⚠️ Valor duplicado! Não será adicionado.\033[m')
+
+    continuar = input('\033[35mDeseja continuar? [S/N] \033[m').strip().upper()
+    if continuar == 'N':
+        break
+
+pares = [n for n in num if n % 2 == 0]
+impares = [n for n in num if n % 2 != 0] 
+
+print('\033[35m' + '=-=' * 20 + '\033[m')
+
+print(f'\033[34m📈 Você digitou os valores em ordem crescente: {sorted(num)}\033[m')
+print(f'\033[36m🔢 Valores pares: {pares}\033[m')
+print(f'\033[33m🔢 Valores ímpares: {impares}\033[m')
+
+print('\033[35m' + '=-=' * 20 + '\033[m')
+'''

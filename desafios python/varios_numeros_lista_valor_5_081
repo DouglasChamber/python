@@ -1,0 +1,48 @@
+valores = []
+while True:
+    valores.append(int(input('Digite um valor: ')))
+    resp = str(input('Quer continuar? [S/N] ')).strip().upper()
+    if resp in 'N':
+        break
+print('=-=' * 20)
+print(f'Você digitou os valores em ordem crescente: {len(valores)} elementos.')
+valores.sort(reverse=True)
+print(f'Você digitou os valores em ordem decrescente: {valores}')
+if 5 in valores:
+    print(f'O valor 5 faz parte da lista e está na posição {valores.index(5)}')
+else:
+    print('O valor 5 não foi encontrado na lista.')
+
+
+
+
+'''
+# 🎨 Programa com cores e emojis
+
+num = []
+
+while True:
+    valor = int(input('\033[36m🔢 Digite um valor: \033[m'))
+    if valor not in num:
+        num.append(valor)
+        print('\033[32m✅ Valor adicionado com sucesso!\033[m')
+    else:
+        print('\033[33m⚠️ Valor duplicado! Não será adicionado.\033[m')
+
+    continuar = input('\033[35mDeseja continuar? [S/N] \033[m').strip().upper()
+    if continuar == 'N':
+        break
+
+print('\033[35m' + '=-=' * 20 + '\033[m')
+print(f'\033[34m📈 Você digitou os valores em ordem crescente: {sorted(num)}\033[m')
+print(f'\033[34m📉 Você digitou os valores em ordem decrescente: {sorted(num, reverse=True)}\033[m')
+
+# Verificação se o número 5 foi digitado
+if 5 in num:
+    posicao = num.index(5)  # retorna a primeira posição do número 5
+    print(f'\033[32m🎯 O número 5 faz parte da lista e está na posição {posicao}.\033[m')
+else:
+    print('\033[31m❌ O número 5 não foi encontrado na lista.\033[m')
+
+print('\033[35m' + '=-=' * 20 + '\033[m')
+'''
