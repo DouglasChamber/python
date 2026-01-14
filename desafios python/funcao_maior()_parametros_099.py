@@ -1,4 +1,29 @@
 from time import sleep
+
+def maior(* núm):
+    cont = maior = 0
+    print('-=' * 30)
+    print('Analisando os valores passados...')
+    for valor in núm:
+        print(f'{valor} ', end='', flush=True)
+        sleep(0.4)
+        if cont == 0:
+            maior = valor
+        else: 
+            if valor > maior:
+                maior = valor
+        cont += 1
+    print(f'\nForam informados {cont} valores ao todo.')
+    print(f'O maior valor informado foi {maior}.')
+
+maior(2, 9, 4, 5, 7, 1)
+maior(8, 3, 10)
+maior(1, 2)
+maior(90)
+maior()
+
+'''
+from time import sleep
 from colorama import Fore, Style, init
 
 # Inicializa o colorama
@@ -30,4 +55,4 @@ maior(2, 9, 4, 5, 7, 1)
 maior(8, 3, 10)
 maior(1, 2)
 maior()
-
+'''

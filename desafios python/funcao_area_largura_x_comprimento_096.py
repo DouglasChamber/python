@@ -1,3 +1,14 @@
+def área(larg, comp):
+    a = larg * comp
+    print(f'A àrea de um terreno {larg}x{comp} é de {a}m²')
+
+print('=== Calculadora de Terrenos ===')
+print('-' * 32)
+l = float(input('LARGURA (m): '))
+c = float(input('COMPRIMENTO (m): '))
+área(l, c)
+
+'''
 from colorama import Fore, Style, init
 
 # Inicializa o colorama
@@ -21,3 +32,4 @@ while True:
     if continuar != 's':
         print(f'\n{Fore.RED}{Style.BRIGHT}Encerrando programa. Obrigado por usar a calculadora!{Style.RESET_ALL}')
         break
+'''

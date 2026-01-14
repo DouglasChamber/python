@@ -1,4 +1,48 @@
 from time import sleep
+
+def contador(i, f, p):
+    
+    if p < 0:
+        p *= -1
+    if p == 0:
+        p = 1
+
+    print('-=' * 20)
+    print(f'Contagem de {i} até {f} de {p} em {p}:')
+    sleep(2)
+
+    if i < f:
+        cont = i
+        while cont <= f:
+            print(f'{cont} ', end='')
+            sleep(0.5)
+            cont += p
+        print('FIM!')
+    else:
+        cont = i
+        while cont >= f:
+            print(f'{cont} ', end='')
+            sleep(0.5)
+            cont -= p
+        print('FIM')
+
+contador(1, 10, 2)
+contador(10, 0, 2)
+print('-=' * 20)
+print('Agora é sua vez de personalizar a contagem!')    
+ini = int(input('Início: '))
+fim = int(input('Fim: '))
+pas = int(input('Passo: '))
+contador(ini, fim, pas)
+
+
+
+
+
+
+
+'''
+from time import sleep
 from colorama import Fore, Style, init
 
 # Inicializa o colorama
@@ -36,3 +80,4 @@ inicio = int(input(Fore.YELLOW + 'Início: ' + Style.RESET_ALL))
 fim = int(input(Fore.YELLOW + 'Fim: ' + Style.RESET_ALL))
 passo = int(input(Fore.YELLOW + 'Passo: ' + Style.RESET_ALL))
 contador(inicio, fim, passo)
+'''

@@ -1,3 +1,14 @@
+def escreva(msg):
+    tam = len(msg) + 4
+    print('~' * tam)
+    print(f'  {msg}')
+    print('~' * tam)
+
+escreva('Douglas Chambers')
+escreva('Curso de Python')
+escreva('CWB')
+
+'''
 from colorama import Fore, Style, init
 
 # Inicializa o colorama
@@ -16,3 +27,4 @@ escreva('Olá, Mundo!', moldura='*', cor=Fore.YELLOW)
 escreva('Curso de Python', moldura='-', cor=Fore.MAGENTA)
 escreva('Função escreva() adaptável', moldura='=', cor=Fore.BLUE)
 escreva('Desafio concluído!', moldura='#', cor=Fore.RED)
+'''
